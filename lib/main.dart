@@ -57,10 +57,8 @@ class HomeTab extends StatelessWidget {
       navigationBar: CupertinoNavigationBar(
         middle: Text("Home")
       ),
-      child: Column(
-        children: <Widget>[
-          BarcodeWidget()
-        ],
+      child: Center(
+          child: BarcodeWidget()
       )
     );
   }
@@ -72,8 +70,8 @@ class BarcodeWidget extends StatelessWidget {
     if (main_storage.getItem("hasImage") == false) {
       return Image.asset(
           "assets/no_bar_code.png",
-          height: 48.0,
-          width: 48.0
+          height: screenWidth/2,
+          width: screenWidth/2
       );
     }
   }
