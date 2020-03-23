@@ -1,13 +1,9 @@
-import 'dart:ui';
 import 'package:flutter/cupertino.dart';
-import 'styles.dart';
 import 'home.dart';
 import 'settings.dart';
-// import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:localstorage/localstorage.dart';
+import 'storage_utils.dart';
 
-LocalStorage mainStorage;
+
 bool firstTime;
 double screenWidth, screenHeight;
 
@@ -23,13 +19,12 @@ void main() {
 
 class GoldMedalFitnessApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    
-    mainStorage = new LocalStorage('info');
-    firstTime = mainStorage.getItem("first") ?? true;
-
-    if (firstTime == true) {
-      mainStorage.setItem("hasImage", false);
-      mainStorage.setItem("barcode", "");
+  
+   
+    if (existsInStorage("firstTime") == false) {
+      setLocalItem("hasBarcodeImg", false);
+      setLocalItem("firstTime", false);
+      setLocalItem("barcode", "");
     }
     
     

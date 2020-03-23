@@ -1,14 +1,8 @@
-import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:gmf_app/settings.dart';
-import 'main.dart';
-import 'styles.dart';
 import 'settings.dart';
-// import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:localstorage/localstorage.dart';
+import 'storage_utils.dart';
 
-LocalStorage mainStorage = new LocalStorage('info');
 double screenWidth, screenHeight;
 
 
@@ -31,7 +25,7 @@ class HomeTab extends StatelessWidget {
 class BarcodeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    if (mainStorage.getItem("hasImage") == false) {
+    if (getLocalItem("hasBarcodeImg", false) == false) {
       return Center(
           child: CupertinoButton(
               child: Text(
@@ -51,7 +45,7 @@ class BarcodeWidget extends StatelessWidget {
       );
     } else {
       return Center(
-        child: Text(mainStorage.getItem("barcode"))
+        child: Text(getLocalItem("barcode", "An Error Occured"))
       );
     }
   }
