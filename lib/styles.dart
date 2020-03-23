@@ -15,4 +15,8 @@ abstract class Styles {
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.bold,
   );
+
+  // static const CupertinoThemeData lightTheme = CupertinoThemeData(
+
+  // )
 }
