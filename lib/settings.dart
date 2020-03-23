@@ -1,9 +1,6 @@
-import 'dart:ui';
 import 'package:flutter/cupertino.dart';
-import 'styles.dart';
-// import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:localstorage/localstorage.dart';
+import 'scanner.dart';
 
 class SettingsTab extends StatelessWidget {
   @override
@@ -15,9 +12,20 @@ class SettingsTab extends StatelessWidget {
       child: Center(
         child: CupertinoButton.filled(
           child: Text("Scan Barcode"),
-          onPressed: () {},
+          onPressed: () {
+            String barcode = "";
+            LocalStorage mainStorage = new LocalStorage('info');
+            scan(barcode);
+
+            mainStorage.setItem("barcode", barcode);
+
+            CupertinoAlertDialog(actions: <Widget>[
+              Text(barcode)
+            ],);
+          },
         )
       )
     );
   }
+  
 }

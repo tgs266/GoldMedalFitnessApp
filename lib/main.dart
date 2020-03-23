@@ -13,8 +13,8 @@ double screenWidth, screenHeight;
 
 void main() {
 
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  // SystemChrome.setPreferredOrientations(
+  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     
   return runApp(GoldMedalFitnessApp());
 }
@@ -29,6 +29,7 @@ class GoldMedalFitnessApp extends StatelessWidget {
 
     if (firstTime == true) {
       mainStorage.setItem("hasImage", false);
+      mainStorage.setItem("barcode", "");
     }
     
     

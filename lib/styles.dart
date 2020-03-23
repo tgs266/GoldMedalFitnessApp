@@ -7,7 +7,6 @@ abstract class Styles {
     fontSize: 18,
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.normal,
-    
   );
 
   static const TextStyle productRowTotal = TextStyle(
