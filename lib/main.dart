@@ -9,6 +9,7 @@ double screenWidth, screenHeight;
 
 void main() {
 
+  
   // SystemChrome.setPreferredOrientations(
   //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     
@@ -18,16 +19,12 @@ void main() {
 
 
 class GoldMedalFitnessApp extends StatelessWidget {
-  Widget build(BuildContext context) {
-  
-   
+  Widget build(BuildContext context) { 
     if (existsInStorage("firstTime") == false) {
       setLocalItem("hasBarcodeImg", false);
       setLocalItem("firstTime", false);
       setLocalItem("barcode", "");
     }
-    
-    
     return CupertinoApp(
       home: HomeScreen(),
     );
@@ -35,6 +32,7 @@ class GoldMedalFitnessApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
