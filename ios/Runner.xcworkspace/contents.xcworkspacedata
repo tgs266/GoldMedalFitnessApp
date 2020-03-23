@@ -4,4 +4,5 @@
    <FileRef
       location = "group:Runner.xcodeproj">
    </FileRef>
+   <key>BuildSystemType</key><string>Original</string>
 </Workspace>
