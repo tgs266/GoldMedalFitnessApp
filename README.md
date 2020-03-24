@@ -1,5 +1,5 @@
 # gmf_app
-
+(https://api.codemagic.io/apps/5e77d440ec3bd81c761538e6/5e77d440ec3bd81c761538e5/status_badge.svg)
 A new Flutter project.
 
 ## Getting Started
