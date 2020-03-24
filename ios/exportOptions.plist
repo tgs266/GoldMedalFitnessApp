@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple/DID PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>uploadSymbols</key>
+	<false/>
+	<key>uploadBitcode</key>
+	<true/>
+	<key>compileBitcode</key>
+	<true/>
 	<key>method</key>
 	<string>app-store</string>
+	<key>teamID</key>
+	<string>MDVM7N965T</string>
 </dict>
 </plist>
